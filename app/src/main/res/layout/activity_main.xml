@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Danh sách học sinh"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/listStudentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#f00"
+            android:dividerHeight="1dp"
+            android:listSelector="#f2f2f2" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:onClick="clickToCreateNewStudent"
+        android:background="#28a745"
+        android:textColor="#fff"
+        android:text="Tạo mới học sinh" />
+    <Button
+        android:id="@+id/btnDetail"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="#ffc107"
+        android:textColor="#fff"
+        android:onClick="clickToGetDetailOfStudent"
+        android:text="Chi tiết học sinh" />
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="#dc3545"
+        android:textColor="#fff"
+        android:onClick="clickToDeleteStudent"
+        android:text="Xóa học sinh" />
+</LinearLayout>
