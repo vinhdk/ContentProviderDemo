@@ -53,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<StudentModel> students = new ArrayList<StudentModel>();
         if (cursor != null) {
             if (cursor.moveToFirst()) {
+                students.add(new StudentModel(
+                        cursor.getString(cursor.getColumnIndex("id")),
+                        cursor.getString(cursor.getColumnIndex("name")),
+                        cursor.getInt(cursor.getColumnIndex("core")),
+                        cursor.getInt(cursor.getColumnIndex("isGraduate"))
+                ));
                 while (cursor.moveToNext()) {
                     StudentModel student = new StudentModel(
                             cursor.getString(cursor.getColumnIndex("id")),
